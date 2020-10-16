@@ -1,0 +1,11 @@
+﻿.inner{
+    max-width: 300px;
+}
+
+.rounded {
+    counter-reset: li;
+    list-style: none;
+    font: 24px "Trebuchet MS", "Lucida Sans";
+    padding: 0;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+}

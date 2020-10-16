@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import List from "./List";
+import Promise from "./Promise";
+import {ProtoType} from "./PrototypeTast";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    let styleForDivInner = {
+        'display': 'flex',
+        'justifyContent': 'space-between',
+        'flexWrap': 'wrap',
+        'margin': '0 100px'
+    }
+    return (
+        <div style={styleForDivInner}>
+            <div>
+                Задание 1. Список
+                <List/>
+            </div>  
+            <div>
+                Задание 2. IIFE функции
+                <p>Смотрите в файле IIFEtask.js</p>
+            </div>
+            <div>
+                Задание 3. Прототипы
+                <p>Смотрите в файле PrototypeTast.js</p>
+                {ProtoType()}
+            </div>
+            <div>
+                Задание 4. Промисы 
+                <Promise/>
+            </div>
+        </div>
+    );
 }
 
 export default App;
